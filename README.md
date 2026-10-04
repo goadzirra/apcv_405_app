@@ -32,12 +32,12 @@ at http://localhost:9090/health.
 
 The pipeline is defined in `Jenkinsfile` and executed by Jenkins. Six stages:
 
-1. **Checkout** — clones the repository from GitHub
-2. **Test** — runs the test suite with `dotnet test`
-3. **Build Docker Image** — builds the container image from the Dockerfile
-4. **Push to DockerHub** — authenticates with stored Jenkins credentials and publishes
-5. **Deploy Locally** — runs the container on host port 9090
-6. **Health Check** — confirms the deployed application responds at `/health`
+1. **Checkout** - clones the repository from GitHub
+2. **Test** - runs the test suite with `dotnet test`
+3. **Build Docker Image** - builds the container image from the Dockerfile
+4. **Push to DockerHub** - authenticates with stored Jenkins credentials and publishes
+5. **Deploy Locally** - runs the container on host port 9090
+6. **Health Check** - confirms the deployed application responds at `/health`
 
 A failure in any stage halts the pipeline, so a broken test or a failed build never
 reaches deployment.
